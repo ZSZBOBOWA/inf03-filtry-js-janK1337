@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="baner">
+      <h1>Wybierz efekt obrazu</h1>
+    </div>
+    <div class="blok1">
+      <img
+        id="obraz1"
+        src="pliki12/pszczola.jpg"
+        alt="pszczola na fioletowym kwiatku"
+      />
+      <form>
+        <input type="radio" name="efekt1" value="blur" id="blur1" />
+        <label for="blur1">Blur</label><br />
+        <input type="radio" name="efekt1" value="sepia" id="sepia1" />
+        <label for="sepia1">Sepia</label><br />
+        <input type="radio" name="efekt1" value="negatyw" id="negatyw1" />
+        <label for="negatyw1">Negatyw</label><br />
+        <button type="button" onclick="efektObraz1()">Zastosuj</button>
+      </form>
+    </div>
+    <div class="blok2">
+      <img id="obraz2" src="pliki12/pomarancza.jpg" alt="drzewo pomarańczy" />
+      <button type="button" onclick="kolorowy()">Kolorowy</button>
+      <button type="button" onclick="czarnoBialy()">Czarno-biały</button>
+    </div>
+    <div class="blok3">
+      <img id="obraz3" src="pliki12/owoce.jpg" alt="Kosz pełen owoców" />
+      <input type="range" id="suwak3" min="0" max="100" value="100" /><br>
+      <button type="button" onclick="efektObraz3()">Zastosuj</button>
+    </div>
+    <div class="blok4">
+      <img id="obraz4" src="pliki12/zolw.jpg" alt="Żółw w wodzie" />
+      <input type="range" id="suwak4" min="0" max="250" /><br>
+      <button type="button" onclick="efektObraz4()">Zastosuj</button>
+    </div>
+    <footer>
+      <p>Strona stworzona przez: 00000000000</p>
+    </footer>
+  </body>
+  <script>
+    const obraz1 = document.getElementById("obraz1");
+    const obraz2 = document.getElementById("obraz2");
+    const obraz3 = document.getElementById("obraz3");
+    const obraz4 = document.getElementById("obraz4");
+    function efektObraz1() {
+   
+    
+      if(document.getElementById("blur1").checked) {
+        obraz1.style.filter = "blur(8px)";
+      } else if (document.getElementById("sepia1").checked) {
+        obraz1.style.filter = "sepia(100%)";
+      } else if (document.getElementById("negatyw1").checked) {
+        obraz1.style.filter = "invert(100%)";
+      }
+    }
+
+    function kolor() {
+        obraz2.style.filter = "grayscale(0%)";
+    }
+    function czarnoBialy() {
+        obraz2.style.filter = "grayscale(100%)";
+    }
+
+    function efektObraz3() {
+      obraz3.style.filter = "brightness(" + document.getElementById("suwak3").value + "%)";
+    }
+    function efektObraz4() {
+      obraz4.style.filter = "contrast(" + document.getElementById("suwak4").value + "%)";
+    }
+  </script>
+</html>

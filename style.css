@@ -1,0 +1,65 @@
+* {
+    font-family: 'Century', Serif;
+    text-align: center;
+}
+
+.baner, footer {
+    background-color: Indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+
+.blok1 {
+    width: 50%;
+    height: 470px;
+    float: left;
+    background-color: white;
+}
+.blok2
+{
+    width: 50%;
+    height: 470px;
+    float: left;
+    background-color: white;
+}
+.blok3 {
+    width: 50%;
+    height: 470px;
+    float: left;
+    background-color: white;
+}
+.blok4 {
+    width: 50%;
+    height: 470px;
+    float: left;
+    background-color: white;
+}
+
+
+img {
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed SlateBlue;
+}
+
+
+a {
+    color: white;
+}
+
+button {
+    background-color: SlateBlue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: Indigo;
+}
+
+input[type="range"] {
+    width: 80%;
+}
